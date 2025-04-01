@@ -1,17 +1,22 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Identity;
+using POS.API.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using POS.API.Extensions;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")??string.Empty;
+builder.Services.AddDataBase(connectionString)
+    .AddIdentity(builder.Configuration);
+
 
 builder.Services.AddControllers();
-
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-
+await app.SeedDatabaseAsync();
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
