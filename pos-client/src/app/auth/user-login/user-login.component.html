@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="card w-50">
+    <h4 class="card-header">Login</h4>
+    <div class="card-body">
+        <form #login="ngForm">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="text"  class="form-control" name="email" [(ngModel)]="loginuser.email" placeholder="Email"/>
+          </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control"  name="password" [(ngModel)]="loginuser.password" placeholder="password"/>
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="UserLogin()">
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
