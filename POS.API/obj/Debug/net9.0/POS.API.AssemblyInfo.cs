@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a6380454135da86fb689578feefc0fbca876b39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8edce936397b46caf967556309b02925c9689076")]
 [assembly: System.Reflection.AssemblyProductAttribute("POS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
